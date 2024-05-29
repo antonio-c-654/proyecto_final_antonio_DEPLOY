@@ -26,7 +26,7 @@
                   <i v-if="producto.alergenos.includes('lacteos')" class="fa-solid fa-cheese text-yellow-400"></i>
                 </div>
                 <i v-if="producto.favorito" class="fa-solid fa-heart text-red-500 cursor-pointer" @click="no_implementado"></i>
-                <i v-if="producto.favorito === false" class="fa-regular fa-heart text-red-500 cursor-pointer hover:bg-red-500" @click="no_implementado"></i>
+                <i v-if="producto.favorito === false" class="fa-regular fa-heart text-red-500 cursor-pointer" @click="no_implementado"></i>
             </div>
             <div class="flex justify-center w-full md:min-h-[70%] min-h-[50%] rounded-md overflow-hidden my-2">
               <img :src="producto.imagen" class="w-full h-full">

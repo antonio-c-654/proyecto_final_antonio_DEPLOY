@@ -115,8 +115,9 @@ export default {
 
                 const datos = res.data
 
-                if(datos.estado == 'success'){
-                    this.toast.success(datos.mensaje, { timeout: 2000, });
+                if(datos.mensaje == 'success'){
+                    this.toast.success('Compra realizada!, la factura le llegará a su correo', { timeout: 2000, });
+                    this.$router.push( {name: 'inicio'} ) // despues de pagar te lleva a inicio
                 } else {
                     this.toast.warning(datos.mensaje, { timeout: 2000, });
                 }
