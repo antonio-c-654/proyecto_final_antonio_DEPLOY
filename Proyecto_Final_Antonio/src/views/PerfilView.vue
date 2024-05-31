@@ -27,7 +27,7 @@
           <img @click="elegir_pfp(pfp_5_icecream)" :src="pfp_5_icecream" class="h-[70px] rounded-full cursor-pointer hover:border-2 hover:border-[#14c458]">
         </div>
         <label>Nueva contraseña</label>
-        <input type="password" placeholder="Contraseña" v-model="password" class="p-2 rounded-md w-full md:w-[30vw] bg-[#111015] border border-[#14c458] my-2">
+        <input type="password" placeholder="Contraseña" v-model="password" minlength="8" maxlength="30" class="p-2 rounded-md w-full md:w-[30vw] bg-[#111015] border border-[#14c458] my-2">
         <div>
           <button @click="cancelar_settings" class="text-white w-[120px] h-[35px] rounded-md cursor-pointer hover:border hover:border-white-600 bg-slate-500 my-8">Cancelar</button>
           <button @click="guardarCampos" class="text-white w-[120px] h-[35px] rounded-md cursor-pointer hover:border hover:border-white-600bl bg-gradient-to-br from-[#14c458] to-teal-400 ml-4">Guardar</button>

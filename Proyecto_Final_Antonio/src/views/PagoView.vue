@@ -46,7 +46,7 @@
             <th class="w-[20%] text-end">Precio</th>
           </tr>
         </thead>
-        <tbody class="mt-2 mb-4 flex flex-col gap-2 max-h-[58vh] overflow-scroll no-scrollbar">
+        <tbody class="mt-2 mb-4 flex flex-col gap-2 max-h-[54vh] overflow-scroll no-scrollbar">
           <tr v-for="prod in carrito" :key="prod.id" class="w-full flex items-center justify-between bg-[#22222a] rounded-md p-2 md:p-4">
             <td class="w-[35%]">{{ prod.nombre }}</td>
             <td class="w-[20%]">{{ prod.coccion }}</td>
@@ -60,8 +60,9 @@
           </tr>
         </tfoot>
       </table>
-      <div>
-        <input v-if="metodo_pago.nombre=='Tarjeta'" type="email" placeholder="Email" v-model="email" required class="p-2 md:mt-2 mt-6 rounded-md w-full md:w-[50%] bg-[#111015] border border-[#14c458]">
+      <div v-if="metodo_pago.nombre=='Tarjeta'" class="flex flex-col w-full md:gap-2">
+        <input type="email" placeholder="Email" v-model="email" required minlength="5" maxlength="30" class="p-2 md:mt-2 mt-6 rounded-md w-full md:w-[60%] lg:w-[50%] bg-[#111015] border border-[#14c458]">
+        <input type="text" placeholder="Dirección" v-model="direccion" required minlength="5" maxlength="45" class="p-2 md:mt-2 mt-6 rounded-md w-full md:w-[60%] lg:w-[50%] bg-[#111015] border border-[#14c458]">
       </div>
       <button @click="volverInicio" class="text-white w-[120px] h-[35px] rounded-md cursor-pointer hover:border hover:border-white-600 bg-slate-500 my-6">Cancelar</button>
       <button type="submit" class="text-white w-[120px] h-[35px] rounded-md cursor-pointer hover:border hover:border-white-600 bg-gradient-to-br from-[#14c458] to-teal-400 my-6 ml-6">Pagar</button>
@@ -87,7 +88,8 @@ export default {
       fecha_cad_tarjeta: null,
       cod_ccv: null,
       fecha_actual: this.obtenerFechaActual(),
-      email: null
+      email: null,
+      direccion: null
     }
   },
   computed:{
@@ -109,6 +111,7 @@ export default {
             const res = await axios.post('/api/products/cart/sendBill',
                     {
                         destinatario: this.email,
+                        direccion: this.direccion,
                         pago_total: this.pago_total
                     }
                 )

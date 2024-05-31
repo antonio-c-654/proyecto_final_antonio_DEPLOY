@@ -6,8 +6,8 @@
     <div class="bg-[#111015] text-white flex flex-col items-center pt-6 md:h-[85vh] min-h-[70vh] h-auto">
       <form @submit.prevent="register" class="md:w-[30vw] h-full w-[90vw] flex flex-col md:items-center md:gap-8 gap-6 mb-4">
         <p class="md:text-2xl text-xl">Register</p>
-        <input type="text" placeholder="Nombre" v-model="nombre" required class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
-        <input type="email" placeholder="Email" v-model="email" required class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
+        <input type="text" placeholder="Nombre" v-model="nombre" required minlength="2" maxlength="20" class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
+        <input type="email" placeholder="Email" v-model="email" required minlength="5" maxlength="30" class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
         <input type="password" placeholder="Contraseña" v-model="password" required minlength="8" maxlength="30" class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
         <p class="w-full text-sm italic"><i class="fa-solid fa-circle-info"></i> La contraseña que elijas debe tener al menos 8 caracteres</p>
         <div class="w-full">

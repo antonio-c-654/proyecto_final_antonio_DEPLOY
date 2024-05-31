@@ -6,17 +6,17 @@
     <div class="bg-[#111015] text-white flex flex-col items-center pt-6 md:h-[85vh] min-h-[70vh] h-auto">
         <form v-if="estado_input == 'correo'" @submit.prevent="enviar_mail" class="md:w-[30vw] h-full w-[90vw] flex flex-col md:items-center md:gap-8 gap-6 mb-4">
             <p class="md:text-2xl text-xl">Introduce tu correo</p>
-            <input type="email" placeholder="Email" v-model="email" required class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
+            <input type="email" placeholder="Email" v-model="email" required minlength="5" maxlength="30" class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
             <button type="submit" class="bg-[#14c458] text-[#dadbdb] w-[120px] h-[35px] rounded-md cursor-pointer hover:border hover:border-white-600 shadow-md bg-gradient-to-br from-[#14c458] to-teal-400">Enviar</button>
         </form>
         <form v-if="estado_input == 'token'" @submit.prevent="enviar_token" class="md:w-[30vw] h-full w-[90vw] flex flex-col md:items-center md:gap-8 gap-6 mb-4">
             <p class="md:text-2xl text-xl">Introduce el token que te hemos enviado</p>
-            <input type="text" placeholder="Token" v-model="token_input" required class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
+            <input type="text" placeholder="Token" v-model="token_input" required minlength="5" maxlength="400" class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
             <button type="submit" class="bg-[#14c458] text-[#dadbdb] w-[120px] h-[35px] rounded-md cursor-pointer hover:border hover:border-white-600 shadow-md bg-gradient-to-br from-[#14c458] to-teal-400">Enviar</button>
         </form>
         <form v-if="estado_input == 'passwd'" @submit.prevent="cambiar_pass" class="md:w-[30vw] h-full w-[90vw] flex flex-col md:items-center md:gap-8 gap-6 mb-4">
             <p class="md:text-2xl text-xl">Introduce tu nueva contraseña</p>
-            <input type="password" placeholder="Contraseña" v-model="new_password" required minlength="8" class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
+            <input type="password" placeholder="Contraseña" v-model="new_password" required minlength="8" maxlength="30" class="p-2 rounded-md w-full bg-[#111015] border border-[#14c458]">
             <p class="w-full text-sm italic"><i class="fa-solid fa-circle-info"></i> La contraseña que elijas debe tener al menos 8 caracteres</p>
             <button type="submit" class="bg-[#14c458] text-[#dadbdb] w-[120px] h-[35px] rounded-md cursor-pointer hover:border hover:border-white-600 shadow-md bg-gradient-to-br from-[#14c458] to-teal-400">Enviar</button>
         </form>
