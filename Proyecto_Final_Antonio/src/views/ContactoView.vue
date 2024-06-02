@@ -3,7 +3,7 @@
   <div>
     <NavVue></NavVue>
 
-    <div class="bg-[#111015] text-white flex flex-col items-center pt-6 md:h-[85vh] h-auto">
+    <div class="bg-[#111015] text-white flex flex-col items-center pt-6 md:h-[85vh] h-auto min-h-[80vh]">
       <form @submit.prevent="no_implementado" class="md:w-[40vw] h-full w-[90vw] flex flex-col md:items-center md:gap-6 gap-4 mb-4">
         <h2 class="md:text-2xl text-lg">¿En qué te podemos ayudar?</h2>
         <p class="md:text-base text-sm">Apreciamos tu feedback para mejorar</p>

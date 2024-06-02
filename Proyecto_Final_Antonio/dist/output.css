@@ -724,16 +724,12 @@ video {
   height: 100%;
 }
 
-.max-h-\[58vh\] {
-  max-height: 58vh;
+.max-h-\[54vh\] {
+  max-height: 54vh;
 }
 
 .max-h-\[89vh\] {
   max-height: 89vh;
-}
-
-.max-h-\[54vh\] {
-  max-height: 54vh;
 }
 
 .min-h-\[100vh\] {
@@ -746,6 +742,10 @@ video {
 
 .min-h-\[70vh\] {
   min-height: 70vh;
+}
+
+.min-h-\[80vh\] {
+  min-height: 80vh;
 }
 
 .min-h-\[90vh\] {
@@ -1425,32 +1425,16 @@ video {
     width: 5vw;
   }
 
+  .md\:w-\[60\%\] {
+    width: 60%;
+  }
+
   .md\:w-\[7vw\] {
     width: 7vw;
   }
 
   .md\:w-\[90\%\] {
     width: 90%;
-  }
-
-  .md\:w-\[0\%\] {
-    width: 0%;
-  }
-
-  .md\:w-\[650\%\] {
-    width: 650%;
-  }
-
-  .md\:w-\[65\%\] {
-    width: 65%;
-  }
-
-  .md\:w-\[6\%\] {
-    width: 6%;
-  }
-
-  .md\:w-\[60\%\] {
-    width: 60%;
   }
 
   .md\:grid-cols-3 {
@@ -1481,16 +1465,16 @@ video {
     gap: 0px;
   }
 
+  .md\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .md\:gap-6 {
     gap: 1.5rem;
   }
 
   .md\:gap-8 {
     gap: 2rem;
-  }
-
-  .md\:gap-2 {
-    gap: 0.5rem;
   }
 
   .md\:p-0 {
@@ -1567,20 +1551,12 @@ video {
     width: 20vw;
   }
 
-  .lg\:w-\[88vw\] {
-    width: 88vw;
-  }
-
-  .lg\:w-\[\] {
-    width: ;
-  }
-
-  .lg\:w-\[50\] {
-    width: 50;
-  }
-
   .lg\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .lg\:w-\[88vw\] {
+    width: 88vw;
   }
 
   .lg\:grid-cols-4 {
